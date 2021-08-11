@@ -15,8 +15,10 @@ def caesar_cipher(uncoded_message, shift_factor = 1)
         #checks if the ascii number generated is a lower case letter, uppercase 
         #letter, or a non letter character
         if old_character_number <= 90 && old_character_number >= 65
+            new_character_number = old_character_number - shift_factor
+            while new_character_number < 
         elsif old_character_number <= 122 && old_character_number >= 97
-            puts "blah"
+            
         else
             new_character_number = old_character_number
         end
@@ -26,7 +28,8 @@ def caesar_cipher(uncoded_message, shift_factor = 1)
     encoded_message = encoded_array.join("")
    else 
     #if the check is false, the following is printed
-    puts "Please enter a valid string and number."
+    puts "Please enter a valid string and number. The number must be in between
+            0 and 33 excluding 0 and 33"
    end
 
 
@@ -38,7 +41,9 @@ def check_inputs(message, number)
     #checks if inputs are valid for the cipher function
     if message.is_a? String == true 
         if number.is_a? Numeric == true
-            return true
+            if number > 32 || number < 1
+                 false
+            end
             
         else
              false
