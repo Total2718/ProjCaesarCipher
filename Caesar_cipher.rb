@@ -50,8 +50,7 @@ def caesar_cipher(uncoded_message, shift_factor = 1)
      puts "Encoded message: #{encoded_message}" 
    else 
     #if the check is false, the following is printed
-    puts "Please enter a valid string and number. The number must be in between
-            0 and 33 excluding 0 and 33"
+    puts "Please enter a valid string and number. The number must be in between 0 and 26 excluding 0 and 26"
    end
 
 
@@ -64,7 +63,7 @@ def check_inputs(message, number)
     
     if message.instance_of?(String) == true
         if number.instance_of?(Fixnum) == true
-            if number > 32 || number < 1
+            if number > 25 || number < 1
                 
                  false
             else
@@ -85,4 +84,4 @@ def check_inputs(message, number)
 end
 
 
-caesar_cipher("Cool Message$%%^&**((", 5)
+caesar_cipher("Me", 25)
