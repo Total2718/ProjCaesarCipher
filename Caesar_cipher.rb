@@ -10,10 +10,20 @@ def caesar_cipher(uncoded_message, shift_factor = 1)
    if check == true
     uncoded_array = uncoded_message.split()
     #uncoded_array allows for easier manipulation of individual characters
-    uncoded_array.each do |character| 
+    uncoded_array.each_with_index do |character, index| 
+        old_character_number = character.ord 
+        #checks if the ascii number generated is a lower case letter, uppercase 
+        #letter, or a non letter character
+        if old_character_number <= 90 && old_character_number >= 65
+        elsif old_character_number <= 122 && old_character_number >= 97
+            puts "blah"
+        else
+            new_character_number = old_character_number
+        end
         
+        encoded_array[index] = new_character_number
     end
-    
+    encoded_message = encoded_array.join("")
    else 
     #if the check is false, the following is printed
     puts "Please enter a valid string and number."
