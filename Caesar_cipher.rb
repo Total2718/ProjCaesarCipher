@@ -48,6 +48,7 @@ def caesar_cipher(uncoded_message, shift_factor = 1)
     end
      encoded_message = encoded_array.join("")
      puts "Encoded message: #{encoded_message}" 
+     encoded_message
    else 
     #if the check is false, the following is printed
     puts "Please enter a valid string and number. The number must be in between 0 and 26 excluding 0 and 26"
